@@ -1,6 +1,27 @@
 # spring-framework-jni-client-sample
 
-Demo of the features of spring framework + client implementation with JNI
+Sample web application based on spring framework with client implementation using JNI. 
+
+Server side collects information about all client machine states (memory usage, cpu loading, number of processes). Clients are configured using XML file. In case of one of the values increases the given limit, e-mail notification is sent.
+
+Following features are demonstrated:
+
+1. Server Side:
+  * Spring Boot
+  * Spring MVC
+  * Spring Data MongoDB
+  * Event sending and handling with Spring Framework
+  * Extensible XML authoring with Spring
+  * Spring fox and Swagger Rest API documentation
+  * Spring Test
+  * Mocking with mockito library
+  * Intergation tests with json path and MockMvc
+2. Client Side (Linux only):
+  * Usage of Java Native Interface (JNI) to call C++ code from java
+  * Reading /proc/loadavg and /proc/meminfo files (linux only)
+  * Buildng JNI lib with CMake
+  * Rest API call with org.apache.httpcomponents
+  * Logging
 
 ##Running
 1. Install mongo db:
