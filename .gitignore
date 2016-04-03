@@ -1,0 +1,14 @@
+**/target/
+**/.settings
+**/.classpath
+**/.project
+*.log
+**/.idea
+*.iml
+
+**/CMakeCache.txt
+**/CMakeFiles
+**/Makefile
+**/cmake_install.cmake
+*.so
+
