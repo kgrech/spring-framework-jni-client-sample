@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:beans="http://www.springframework.org/schema/beans"
+            targetNamespace="http://github.com/kgrech/statcollectior/clients"
+            attributeFormDefault="unqualified"
+            elementFormDefault="qualified">
+
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+
+    <xsd:element name="client">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="alert" maxOccurs="unbounded" minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:complexContent>
+                            <xsd:extension base="beans:identifiedType">
+                                <xsd:attribute type="xsd:string" name="type" use="required"/>
+                                <xsd:attribute type="xsd:float" name="limit" use="required"/>
+                                <xsd:attribute type="xsd:boolean" name="enabled" use="required"/>
+                                <xsd:attribute type="xsd:boolean" name="repeat" use="required"/>
+                            </xsd:extension>
+                        </xsd:complexContent>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute type="xsd:string" name="key"/>
+            <xsd:attribute type="xsd:string" name="mail"/>
+            <xsd:attribute type="xsd:string" name="duration"/>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

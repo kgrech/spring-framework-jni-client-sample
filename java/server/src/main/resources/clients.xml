@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://github.com/kgrech/statcollectior/clients"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://github.com/kgrech/statcollectior/clients
+       http://github.com/kgrech/statcollectior/clients/clients.xsd">
+
+    <c:client key="client_1" mail="test_client1@company.com" duration="daily">
+        <c:alert type="memory" limit="0.99" enabled="true" repeat="true"/>
+        <c:alert type="cpu" limit="0.99" enabled="true" repeat="true"/>
+        <c:alert type="processes" limit="50000" enabled="true" repeat="true"/>
+    </c:client>
+
+    <c:client key="client_2" mail="test_client2@company.com" duration="hourly">
+        <c:alert type="memory" limit="0.5" enabled="true" repeat="true"/>
+        <c:alert type="cpu" limit="0.2" enabled="true" repeat="true"/>
+        <c:alert type="processes" limit="50" enabled="true" repeat="true"/>
+    </c:client>
+
+</beans>
